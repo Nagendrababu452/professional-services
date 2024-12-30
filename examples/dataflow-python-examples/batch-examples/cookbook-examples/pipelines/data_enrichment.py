@@ -79,7 +79,7 @@ class DataIngestion(object):
         reader = csv.reader(string_input.split('\n'))
         for csv_row in reader:
             if (sys.version_info.major < 3.0):
-                values = [x.decode('utf8') for x in csv_row]
+                values = values = [x for x in csv_row]
             else:
                 values = csv_row
             # Our source data only contains year, so default January 1st as the
